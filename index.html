@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Encuesta</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f2f4f8; margin: 0; padding: 20px; color: #222; }
+  .card { max-width: 560px; margin: 0 auto; background: #fff; padding: 28px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+  h1 { margin-top: 0; font-size: 1.5rem; }
+  label.q { display: block; font-weight: bold; margin: 20px 0 8px; }
+  input[type=text], input[type=email], textarea, select {
+    width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; box-sizing: border-box;
+  }
+  .op { display: block; margin: 6px 0; font-weight: normal; }
+  button { margin-top: 24px; width: 100%; padding: 12px; background: #2d6cdf; color: #fff; border: 0; border-radius: 8px; font-size: 1rem; cursor: pointer; }
+  button:hover { background: #1f55b8; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Encuesta</h1>
+
+  <!-- CAMBIA TU_CORREO@gmail.com POR TU CORREO -->
+  <form action="https://formsubmit.co/alejandromquintero2@gmail.com" method="POST">
+
+    <!-- Configuración de FormSubmit -->
+    <input type="hidden" name="_subject" value="Nueva respuesta de la encuesta">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none"> <!-- anti-spam -->
+
+    <label class="q" for="nombre">Tu nombre</label>
+    <input type="text" id="nombre" name="Nombre" required>
+
+    <label class="q" for="correo">Tu apodo (opcional)</label>
+    <input type="Apod" id="apodo" name="Apodo">
+
+    <label class="q">¿Que tanto te gusta el contacto fisico??</label>
+    <label class="op"><input type="radio" name="Calificacion" value="Mucho" required> Excelente</label>
+    <label class="op"><input type="radio" name="Calificacion" value="Bastante"> Bueno</label>
+    <label class="op"><input type="radio" name="Calificacion" value="No tanto"> Regular</label>
+    <label class="op"><input type="radio" name="Calificacion" value="Lo odio"> Malo</label>
+
+    <label class="q">¿Qué te gusta en alguien?(puedes marcar varias)</label>
+    <label class="op"><input type="checkbox" name="Gusto" value="Inteligencia"> Inteligencia</label>
+    <label class="op"><input type="checkbox" name="Gusto" value="Belleza"> Belleza</label>
+    <label class="op"><input type="checkbox" name="Gusto" value="Detallismo"> Detallismo</label>
+    <label class="op"><input type="checkbox" name="Gusto" value="Atencion"> Atencion</label>
+
+    <label class="q" for="frecuencia">¿Que tan frecuente te bañas?</label>
+    <select id="frecuencia" name="Frecuencia">
+      <option>Diario</option>
+      <option>Semanal</option>
+      <option>Mensual</option>
+      <option>Casi nunca</option>
+    </select>
+
+    <label class="q" for="comentarios">Comentarios</label>
+    <textarea id="comentarios" name="Comentarios" rows="4"></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+</body>
+</html>
